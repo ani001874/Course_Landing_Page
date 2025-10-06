@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #090b0f;
+  position: relative;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.link {
+  ul {
+    display: flex;
+    gap: 20px;
+    background-color: #100e16;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 10px 25px;
+    border-radius: 20px;
+
+    li {
+      list-style-type: none;
+      position: relative;
+      display: block;
+      transition: scale 0.3s ease, margin 0.3s ease;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      &:hover {
+        scale: 1.4;
+        margin: 0px 10px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 10%;
+        background-color: #7d4aed;
+        bottom: 0px;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.main-header {
+  h1 {
+    font-size: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-family: "Poppins", "Montserrat", "Raleway", sans-serif;
+    background-image: url("images/indian_flag.webp");
+    background-clip: text;
+    /* -webkit-background-clip: text; */
+    background-size: cover;
+    color: transparent;
+    /* background-position: 30% 70%; */
+    background-repeat: repeat-x;
+  }
+}
+
+
