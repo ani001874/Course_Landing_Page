@@ -1,0 +1,208 @@
+.course-section {
+  .course-header {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    h2 {
+      font-size: 75px;
+    }
+    p {
+      font-size: 25px;
+      width: 50%;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+
+    &::after {
+      content: "";
+      width: 150px;
+      height: 5px;
+      position: absolute;
+      background-color: #10b18e;
+      bottom: -10%;
+      border-radius: 10px;
+      left: 50%;
+      translate: -75px 0px;
+    }
+  }
+
+  .all-course {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 220px;
+    gap: 100px;
+ 
+    
+    
+    
+
+
+    .course-card-container {
+      width: 300px;
+      height: 430px;
+      perspective: 700px;
+      border-radius: 10px;
+      /* margin-bottom: 1000px; */
+      transform-style: preserve-3d;
+     
+     
+
+      &:hover .course-card {
+        rotate: x 180deg;
+      }
+
+      .course-card {
+        width: 100%;
+        /* background-color: red; */
+        background-image: linear-gradient(#0a0c10, #232a37);
+        height: 100%;
+        transition: all 1s;
+        transform-style: preserve-3d;
+        /* CSS For front-face */
+        border-radius: 10px;
+        transform: rotateY(56deg);
+         animation: rotateY0 linear both;
+          animation-timeline: view(90% 5%);
+
+        .face {
+          position: absolute;
+          width: 300px;
+          height: 430px;
+          backface-visibility: hidden;
+          border-radius: 10px;
+        }
+
+        .back {
+          background-image: linear-gradient(#0a0c10, #232a37);
+          rotate: x 180deg;
+
+          .back-header {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            gap: 15px;
+          }
+
+          /* padding: 20px; */
+
+          .back-content {
+            margin-bottom: 30px;
+
+            .para {
+              padding: 0 15px;
+            }
+
+            .list {
+              ul {
+                padding: 20px;
+
+                li {
+                  display: flex;
+                  list-style-type: none;
+                  gap: 15px;
+                  align-items: center;
+                  font-size: 18px;
+                  text-transform: capitalize;
+                  margin: 18px 0;
+
+                  svg {
+                    width: 18px;
+                    height: 18px;
+                  }
+                }
+              }
+            }
+          }
+
+          .back-footer {
+            padding: 15px;
+
+            a {
+              display: flex;
+
+              /* text-align: center; */
+
+              /* width: 80%; */
+              background-color: #035745;
+
+              border-radius: 10px;
+              font-size: 24px;
+              padding: 12px 0px;
+              text-decoration: none;
+              justify-content: space-around;
+              align-items: center;
+
+              button {
+                border: none;
+                color: white;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 600;
+                /* background-color: green; */
+                letter-spacing: 1px;
+              }
+            }
+          }
+        }
+
+        .course-thumbnail {
+          width: 100%;
+          padding: 5px;
+          margin: auto;
+          img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px 8px 0px 0px;
+          }
+        }
+        .course-for {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          span {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 15px;
+          }
+
+          span:first-child {
+            background-color: #08bb94;
+          }
+          span:nth-child(2) {
+            background-color: #0b101a;
+          }
+        }
+
+        .other-details {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          text-transform: capitalize;
+          color: #e7ecf3f0;
+          h3 {
+            color: white;
+            font-size: 23px;
+          }
+
+          .badges {
+            margin-top: 15px;
+            span {
+              background-color: #0b101a;
+              padding: 2px 8px;
+              font-size: 14px;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes rotateY0 {
+    to{
+       transform: rotateY(0deg); 
+    }
+}
