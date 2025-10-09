@@ -170,11 +170,14 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .link {
-    position: static;
 
-    ul {
+
+/* Tablet design */
+
+@media screen and (min-width:760px) {
+    .link {
+      position: static;
+        ul {
       gap: 20px;
       width: fit-content;
       margin: 15px auto;
@@ -196,6 +199,9 @@
         &:hover {
           scale: 1.4;
           margin: 0px 10px;
+           a {
+            color: #16cca5;
+           }
         }
 
         &::after {
@@ -203,76 +209,79 @@
           position: absolute;
           width: 0%;
           height: 10%;
-          background-color: #7d4aed;
-          bottom: 0px;
+          background-color: #10b18e;
+          bottom: -10%;
           left: 0;
+          
           transition: all 0.3s ease;
         }
+ 
 
         &:hover::after {
           width: 100%;
+         
         }
       }
     }
-  }
-
-  .main-header {
-  }
-
-  /* Type Writter Effect */
-  .whatIsStrike {
-    .typeWritter-effect {
-      width: fit-content;
-      display: flex;
-      margin: auto;
-
-      h2 {
-        font-size: 45px;
-        font-weight: 300;
-        /* background-color: #7d4aed; */
-        width: fit-content;
-
-        span {
-          color: #10b18e;
-          text-transform: uppercase;
-        }
-      }
-
-      ul {
-        height: 50px;
-        position: static;
-        overflow: hidden;
-        line-height: 50px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-        align-items: start;
-
-        li {
-          animation: slide-up 16s steps(4) infinite;
-          list-style-type: none;
-
-          span {
-            font-size: 45px;
-            font-weight: 300;
-            animation: moveUp 16s linear infinite;
-            display: inline-block;
-            animation: typing 2s steps(7) infinite alternate;
-            color: #10b18e;
-            text-transform: uppercase;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
     }
 
-    .invite {
+    .whatIsStrike {
+
+      .typeWritter-effect {
+       width: fit-content;
+       display: flex;
+       margin: auto;
+    
+  
+       h2 {
+         font-size: 30px;
+         font-weight: 300;
+     
+         width: fit-content;
+        
+         
+  
+         span {
+           color: #10b18e;
+           text-transform: uppercase;
+         }
+       }
+  
+       ul {
+         height: 50px;
+         position: static;
+         
+         line-height: 50px;
+         display: flex;
+         flex-direction: column;
+         margin-left: 20px;
+         align-items: start;
+  
+         li {
+           animation: slide-up 16s steps(4) infinite;
+           list-style-type: none;
+  
+           span {
+             font-size: 45px;
+             font-weight: 300;
+             animation: moveUp 16s linear infinite;
+             display: inline-block;
+             animation: typing 2s steps(7) infinite alternate;
+             color: #10b18e;
+             text-transform: uppercase;
+             overflow: hidden;
+             white-space: nowrap;
+           }
+         }
+       }
+     }
+
+     .invite {
       p {
         font-size: 35px;
       }
     }
-
+    
     .why-should-join {
       margin: auto;
       width: fit-content;
@@ -296,6 +305,39 @@
         }
       }
     }
+
+
+    }
+
+}
+
+
+/* Desktop design */
+
+@media screen and (min-width: 1024px) {
+  .link {
+    position: static;
+
+  
+  }
+
+  .main-header {
+  }
+
+  /* Type Writter Effect */
+  .whatIsStrike {
+    .typeWritter-effect {
+   
+
+      h2 {
+        font-size: 45px;
+        
+        /* background-color: #7d4aed; */
+        
+      }
+
+    }
+
   }
 }
 

@@ -1,51 +1,50 @@
 .course-section {
   .course-header {
-    margin-top: 30px;
-    text-align: center;
     position: relative;
     h2 {
-      font-size: 75px;
+      margin-top: 30px;
+      text-align: center;
+      position: relative;
+      font-size: 25px;
     }
     p {
-      font-size: 25px;
-      width: 50%;
-      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 19px;
       line-height: 1.5;
+      margin: 20px auto;
     }
 
     &::after {
       content: "";
-      width: 150px;
+      width: 30%;
       height: 5px;
       position: absolute;
-      background-color: #10b18e;
+      background-color: #08bb94;
       bottom: -10%;
       border-radius: 10px;
       left: 50%;
-      translate: -75px 0px;
+      translate: -50% 0px;
     }
   }
 
   .all-course {
     display: flex;
-    flex-wrap: wrap;
-    padding: 100px 220px;
-    gap: 100px;
- 
-    
-    
-    
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
 
 
     .course-card-container {
       width: 300px;
-      height: 430px;
+      height: 450px;
       perspective: 700px;
       border-radius: 10px;
-      /* margin-bottom: 1000px; */
+      margin-bottom: 50px;
       transform-style: preserve-3d;
+      margin: auto;
      
-     
+    
 
       &:hover .course-card {
         rotate: x 180deg;
@@ -61,13 +60,13 @@
         /* CSS For front-face */
         border-radius: 10px;
         transform: rotateY(56deg);
-         animation: rotateY0 linear both;
-          animation-timeline: view(90% 5%);
+        animation: rotateY0 linear both;
+        animation-timeline: view(90% 5%);
 
         .face {
           position: absolute;
           width: 300px;
-          height: 430px;
+          height: 450px;
           backface-visibility: hidden;
           border-radius: 10px;
         }
@@ -86,7 +85,7 @@
           /* padding: 20px; */
 
           .back-content {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
 
             .para {
               padding: 0 15px;
@@ -183,6 +182,8 @@
           h3 {
             color: white;
             font-size: 23px;
+            /* color: blue; */
+            font-weight: 900;
           }
 
           .badges {
@@ -200,9 +201,42 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .course-section {
+    .course-header {
+      h2 {
+        font-size: 75px;
+      }
+      p {
+        font-size: 30px;
+        width: 50%;
+      }
+
+      &::after {
+        width: 10%;
+      }
+    }
+
+    .all-course {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 100px 200px;
+      /* gap: 100px; */
+      /* background-color: red; */
+      /* justify-content: center; */
+      
+      gap: 100px;
+
+      .course-card-container {
+        margin: 0;
+      }
+      
+    }
+  }
+}
 
 @keyframes rotateY0 {
-    to{
-       transform: rotateY(0deg); 
-    }
+  to {
+    transform: rotateY(0deg);
+  }
 }
