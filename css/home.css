@@ -1,53 +1,42 @@
 .link {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1000;
+  margin: 0;
+
   ul {
     display: flex;
-    gap: 20px;
-    background-color: #0d0d0d;
-    width: fit-content;
-    margin: 15px auto;
-    padding: 10px 25px;
-    border-radius: 20px;
+    background-color: #242323;
+    /* width: 100vw; */
+    gap: 35px;
+    padding: 10px 8px;
+    border-radius: 20px 20px 0 0;
+    justify-content: center;
 
     li {
       list-style-type: none;
-      position: relative;
-      display: block;
-      transition: scale 0.3s ease, margin 0.3s ease;
-
       a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-decoration: none;
         color: white;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-
-      &:hover {
-        scale: 1.4;
-        margin: 0px 10px;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 10%;
-        background-color: #7d4aed;
-        bottom: 0px;
-        left: 0;
-        transition: all 0.3s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
+        text-align: center;
+        gap: 5px;
       }
     }
   }
-}
 
-/* Main Header */
+  /* Main Header */
+}
 
 .main-header {
   h1 {
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -62,17 +51,16 @@
     background-repeat: repeat-x;
   }
 }
-/* Type Writter Effect */
+
 .whatIsStrike {
   .typeWritter-effect {
-    width: fit-content;
+    margin-top: 20px;
     display: flex;
-    margin: auto;
-
+    position: relative;
     h2 {
-      text-align: center;
-      font-size: 45px;
-      font-weight: 300;
+      text-align: left;
+      width: 68%;
+      margin: auto;
 
       span {
         color: #10b18e;
@@ -81,30 +69,33 @@
     }
 
     ul {
-      height: 50px;
+      position: absolute;
+      top: 45%;
+      left: 57%;
+      height: 35px;
+      /* background-color: red; */
+      line-height: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      flex-wrap: nowrap;
       overflow: hidden;
 
       li {
         list-style-type: none;
-        margin-left: 12px;
-        text-transform: uppercase;
-        font-size: 45px;
-        font-weight: 300;
-        position: relative;
-        /* line-height: 75px; */
+        color: greenyellow;
         top: 0;
-        animation: hide 16s steps(4) infinite;
-        color: #10b18e;
-        /* background-color: red; */
+        animation: slide-up 24s steps(4) infinite;
 
-        &::after {
-          content: "";
-          position: absolute;
-          left: 10%;
-          width: 100%;
-          height: 100%;
-          background-color: #090b0f;
-          animation: typing 4s steps(10) infinite;
+        span {
+          text-transform: uppercase;
+          font-size: 25px;
+          font-weight: bold;
+          overflow: hidden;
+          white-space: nowrap;
+          animation: typing 3s steps(7) infinite alternate;
+          display: inline-block;
+          /* border-right: 2px solid white; */
         }
       }
     }
@@ -112,16 +103,11 @@
 
   .invite {
     padding: 25px;
-    display: flex;
-    flex-direction: column;
     p {
       text-align: center;
-      font-size: xx-large;
+      font-size: 19px;
       line-height: 1.4;
-    }
-
-    p:last-child {
-      margin-top: 15px;
+      /* background-color: red; */
     }
 
     button {
@@ -148,54 +134,189 @@
       }
     }
   }
-
   .why-should-join {
     display: flex;
-    gap: 5px;
-    margin: auto;
-    width: fit-content;
-    margin-top: 75px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+
     div {
-      /* background-color: gray; */
-      width: 200px;
-      /* background-color: red; */
+      width: fit-content;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      gap: 10px;
+
       img {
-        width: 100px;
-        height: 100px;
+        width: 50%;
+        height: 50px;
       }
 
       .icon {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
       }
       p {
-        font-size: 20px;
+        font-size: 18px;
         text-transform: capitalize;
+        text-align: center;
         /* color: #10b18e; */
       }
     }
   }
 }
 
-@keyframes hide {
-  100% {
-    top: -200px;
+@media screen and (min-width: 1024px) {
+  .link {
+    position: static;
+
+    ul {
+      gap: 20px;
+      width: fit-content;
+      margin: 15px auto;
+      padding: 10px 25px;
+      border-radius: 20px;
+      background-color: #0d0d0d;
+
+      li {
+        position: relative;
+        display: block;
+        transition: scale 0.3s ease, margin 0.3s ease;
+
+        a {
+          svg {
+            display: none;
+          }
+        }
+
+        &:hover {
+          scale: 1.4;
+          margin: 0px 10px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 10%;
+          background-color: #7d4aed;
+          bottom: 0px;
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .main-header {
+  }
+
+  /* Type Writter Effect */
+  .whatIsStrike {
+    .typeWritter-effect {
+      width: fit-content;
+      display: flex;
+      margin: auto;
+
+      h2 {
+        font-size: 45px;
+        font-weight: 300;
+        /* background-color: #7d4aed; */
+        width: fit-content;
+
+        span {
+          color: #10b18e;
+          text-transform: uppercase;
+        }
+      }
+
+      ul {
+        height: 50px;
+        position: static;
+        overflow: hidden;
+        line-height: 50px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        align-items: start;
+
+        li {
+          animation: slide-up 16s steps(4) infinite;
+          list-style-type: none;
+
+          span {
+            font-size: 45px;
+            font-weight: 300;
+            animation: moveUp 16s linear infinite;
+            display: inline-block;
+            animation: typing 2s steps(7) infinite alternate;
+            color: #10b18e;
+            text-transform: uppercase;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .invite {
+      p {
+        font-size: 35px;
+      }
+    }
+
+    .why-should-join {
+      margin: auto;
+      width: fit-content;
+      margin-top: 75px;
+      /* display: none; */
+      gap: 0px;
+      div {
+        width: 200px;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        .icon {
+          width: 100px;
+          height: 100px;
+        }
+        p {
+          font-size: 22px;
+        }
+      }
+    }
   }
 }
 
 @keyframes typing {
-  0% {
-    left: 0%;
+  0%,
+  10% {
+    width: 0%;
   }
-  40%,
-  60% {
-    left: calc(100% + 10px);
-  }
+
+  65%,
   100% {
-    left: 0%;
+    width: 100%;
+  }
+
+  /* 70%,100% {
+    width: 130%;
+  } */
+}
+
+@keyframes slide-up {
+  100% {
+    translate: 0 -400%;
   }
 }
