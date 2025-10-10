@@ -171,6 +171,82 @@
 }
 
 
+.home-section {
+  display: flex;
+  gap: 50px;
+}
+
+
+
+ .cube-container {
+        perspective: 1000px;
+        width: 300px;
+        height: 300px;
+        /* margin: 400px auto; */
+      }
+
+      .cube {
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg);
+        animation: rotate 5s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: rotateX(0deg) rotateY(360deg);
+        }
+
+        100% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+
+      .side {
+        width: inherit;
+        height: inherit;
+        font-size: 80px;
+        color: white;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+      }
+
+      .side1 {
+        background-color: goldenrod;
+        transform: translateZ(150px);
+        /* display: none; */
+      }
+      .side2 {
+        background-color: yellowgreen;
+        transform: rotateY(90deg) translateZ(150px);
+      }
+      .side3 {
+        background-color: hotpink;
+        transform: rotateY(90deg) translateZ(-150px);
+      }
+      .side4 {
+        background-color: tomato;
+        transform: rotateX(90deg) translateZ(150px);
+      }
+      .side5 {
+        background-color: slateblue;
+        transform: rotateX(-90deg) translateZ(150px);
+      }
+      .side6 {
+        background-color: gold;
+        transform: rotateY(180deg) translateZ(150px);
+      }
+
+
 
 /* Tablet design */
 
