@@ -1,0 +1,245 @@
+.instructor-section {
+  margin-top: 150px;
+  
+  .fade-up {
+    animation: fade-up both;
+    animation-timeline: view();
+  }
+
+
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 30px;
+
+    span {
+      color: #08bb94;
+    }
+  }
+
+  p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 19px;
+    padding: 0px 20px;
+  }
+
+  .instructor {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .profile-image {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin: auto;
+
+      img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .instructor-section-header {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 50px 0px 20px 0px;
+      align-items: center;
+
+      h3 {
+        font-size: 25px;
+        font-weight: 900;
+      }
+
+      svg {
+        fill: #08bb94;
+      }
+    }
+
+    .achievement {
+      margin: 20px 0;
+      div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px;
+        span {
+          display: block;
+          background-color: #08bb94;
+          text-wrap: nowrap;
+          padding: 5px;
+          border-radius: 15px;
+          font-weight: 700;
+        }
+      }
+
+      .first {
+        span:nth-child(1) {
+          background-color: #232a37;
+          color: #035745;
+        }
+        span:nth-child(2) {
+          background-color: #232a37;
+          color: #cfc5d399;
+        }
+      }
+    }
+
+    p {
+      padding: 0 15px;
+      color: rgb(163, 161, 161);
+    }
+
+    .learning-btn {
+      margin: 30px;
+      a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: fit-content;
+        padding: 20px;
+        margin: 18px auto;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      a:first-child {
+        background: linear-gradient(to right, #00ff87, rgb(70, 128, 164));
+        border-radius: 10px;
+      }
+
+      a:last-child {
+        background-color: #232a37;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+
+@keyframes fade-up  {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .instructor-section {
+    h2 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 40px;
+      display: block;
+      /* padding: 0 100px; */
+      margin-top: 20px;
+      line-height: 1.2;
+    }
+
+    .instructor {
+      flex-direction: row;
+      /* padding: 50px 148px; */
+      text-align: left;
+      /* background-color: aqua; */
+      /* justify-items: center; */
+      /* align-items: center; */
+
+      .profile-image {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .instructor-details {
+        width: 50vw;
+      }
+
+      .instructor-section-header {
+        justify-content: start;
+
+        h3 {
+          font-size: 45px;
+        }
+      }
+
+      .achievement {
+        div {
+          justify-content: start;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        text-align: left;
+        padding-right: 50px;
+      }
+
+      .learning-btn {
+        display: flex;
+        justify-content: start;
+        margin-left: 5px;
+        gap: 30px;
+        a {
+          margin: 0;
+        }
+      }
+    }
+
+    .instructor:last-child {
+      .profile-image {
+        order: 2;
+      }
+      .instructor-details {
+        /* background-color: red; */
+        /* background-color: red; */
+        margin-left: 20px;
+        order: 1;
+        .instructor-section-header {
+          justify-content: end;
+        }
+
+        .achievement {
+          div {
+            justify-content: end;
+          }
+        }
+        p {
+          /* text-align: center; */
+          display: flex;
+          /* background-color: #00ff87; */
+          padding-right: 0;
+
+          text-align: right;
+        }
+
+        .learning-btn {
+          display: flex;
+          justify-content: end;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1040px) {
+  .instructor-section {
+    p {
+      padding: 0 220px;
+    }
+
+    .instructor {
+      p {
+        padding-right: 200px;
+      }
+    }
+  }
+}

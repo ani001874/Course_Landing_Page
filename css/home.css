@@ -177,13 +177,42 @@
 @media screen and (min-width:760px) {
     .link {
       position: static;
+      display: flex;
+      /* background-color: aquamarine  ; */
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      justify-content: space-between;
+      padding: 10px 0px;
+      
+      
+      .authBtn {
+        margin-right: 10px;
+        button {
+          padding: 10px 20px;
+          border:none;
+          text-transform: capitalize;
+            color: white;
+            border-radius: 15px;
+        }
+
+        button:first-child {
+          background-color: #16cca5;
+        }
+
+         button:last-child {
+          background-color: #242323;
+         }
+      }
+
         ul {
       gap: 20px;
       width: fit-content;
-      margin: 15px auto;
+      
       padding: 10px 25px;
       border-radius: 20px;
       background-color: #0d0d0d;
+      
 
       li {
         position: relative;
