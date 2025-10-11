@@ -16,7 +16,8 @@ body {
   background: #090b0f;
   position: relative;
   color: white;
-  
+   max-width: 2535px;
+   margin: auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
