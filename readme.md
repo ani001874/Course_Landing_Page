@@ -7,7 +7,7 @@ A modern, responsive landing page for online courses, featuring instructor profi
 ## 🚀 Features
 
 - **Home Section:** Course overview and animated cube with tech icons.
-- **Tutorials:** Interactive course cards with details and links.
+- **Tutorials:** Interactive course cards with details.
 - **Instructors:** Profiles of lead and senior instructors.
 - **Contact:** Form for inquiries and support.
 
