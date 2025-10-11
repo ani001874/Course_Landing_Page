@@ -14,7 +14,7 @@ A modern, responsive landing page for online courses, featuring instructor profi
 
 1. Clone or download this repository.
 2. Open `index.html` in your browser.
-3. Customize content and styles as needed.
+
 
 ## Credits
 
