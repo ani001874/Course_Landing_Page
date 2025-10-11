@@ -20,6 +20,7 @@ Course_Landing_Page/
 ├── index.html
 ├── style.css
 ├── readme.md
+├── favicon.ico
 ├── css/
 │   ├── contact.css
 │   ├── footer.css
